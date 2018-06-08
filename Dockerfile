@@ -49,7 +49,7 @@ RUN  wget https://github.com/BVLC/caffe/archive/master.zip && unzip master.zip &
 	make all -j8 && \
 	make test -j8 && \
 	cd python && \
-	for req in $(cat requirements.txt); do pip install ---upgrade --ignore-installed -i https://pypi.tuna.tsinghua.edu.cn/simple $req ; done && \
+	for req in $(cat requirements.txt); do pip install --upgrade --ignore-installed -i https://pypi.tuna.tsinghua.edu.cn/simple $req ; done && \
 	cd .. && \
 	make pycaffe && \
 	export PYTHONPATH=/root/caffe/python:$PYTHONPATH && \
